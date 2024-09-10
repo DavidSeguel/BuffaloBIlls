@@ -1,0 +1,193 @@
+* {
+    font-family: "Roboto", system-ui;
+    font-style: normal;
+}
+
+@import "./utilities/variables";
+@import "./utilities/mixins";
+
+@font-face {
+    font-family: "BillsMafia";
+    src: url(../font/BillsMafia.ttf);
+}
+
+
+//css header
+
+header{
+    height: 25vh;
+    width: 100%;
+    @include flexBasico(column,none ,none);
+    color: nth($colores,2);
+    background-color: nth($colores,1);
+
+    .headerbills{
+        @include flexBasico(row,none ,none);
+        width: 30%;
+        height: 70%;
+
+        .logobills{
+            width: 50%;
+            height: auto;
+            overflow: hidden;
+            @include flexBasico(column,center,center);
+            a{
+                overflow: hidden;
+                @include flexBasico(none,center,center);
+                object-fit: contain;
+                img{
+                    display: block;
+                    width: 80%;
+                    height: auto;
+                    max-width: 100%;
+                    padding: 20px 20px 20px 20px;
+                }
+            }
+        }
+    }
+    .titulobills{
+        @include flexBasico(column,center,none);
+        width: 50%;
+        height: 100%;
+        p{
+            font-family: "BillsMafia";
+            font-size: 40px;
+            font-weight: 900;
+            margin: 0px;
+            text-align: right;
+        }
+    }
+    nav{
+        height: auto;
+        width: 100%;
+        font-size: 30px;
+        bottom: 0;
+        left: 0;
+
+        ul{
+            @include flexBasico(row,space-around,none);
+            list-style-type: none;
+            padding: 0px;
+        }
+        a{
+            color: nth($colores , 2 );
+            text-decoration: none;
+            font-weight: 900;
+        }
+    }
+}
+
+//css main
+
+.UltimasNoticias{
+    height: 600px;
+    width: 95%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+
+    .ImagenNoticia {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        min-height: 50%;
+        height: auto;
+        object-fit: cover;
+    }
+    
+    .Titular{
+        height: 20%;
+        width: 100%;
+        color: #ffffff;
+        background-color: #0000006c;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.Calendario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    padding: 0px 50px 0px 50px;
+    }
+    
+    .CardCalendario1 { grid-area: 1 / 1 / 2 / 2; }
+    .CardCalendario2 { grid-area: 1 / 2 / 2 / 3; }
+    .CardCalendario3 { grid-area: 2 / 1 / 3 / 2; }
+    .CardCalendario4 { grid-area: 2 / 2 / 3 / 3; }
+
+    .conecta{
+        width: 95%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .NavBarEquipo{
+        font-size: 20px;
+        color: #ffffff;
+        height: 40px;
+        width: 95%;
+        background-color: rgba(0, 0, 141, 0.536) ;
+        border: 2px solid rgb(0, 0, 141);
+        margin: 0 auto;
+
+        
+        nav{
+            height: 40px;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        ul{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            list-style-type: none;
+        }
+    }
+
+    .CardEquipo{
+        width: 95%;
+        margin: 0 auto;
+        column-gap: 10px;
+    }
+
+//css footer
+
+footer{
+    width: 100%;
+    height: 100%;
+    @include flexBasico(column,center,center);
+    background-color: nth($colores , 1 );
+    
+
+    nav{
+        width: 100%;
+        height: auto;
+    
+        ul{
+            @include flexBasico(row,space-around,none);
+            list-style-type: none;
+            padding: 0px;
+
+
+        }
+        li a{
+            color: nth($colores , 2);
+            font-size: 20px;
+            text-decoration: none;
+        }
+    }
+
+    .LogoFooter{
+        width: 200px;
+        height: auto;
+        margin: 20px 20px 20px 20px;
+    }
+}

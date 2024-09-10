@@ -1,0 +1,104 @@
+@mixin flexBasico($flexDirection,$justifyContent,$alignItems){
+    display: flex;
+    flex-direction: $flexDirection;
+    justify-content: $justifyContent;
+    align-items: $justifyContent ;
+}
+
+.TitularSeccion{
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 36px;
+    margin: 12px 0px 12px 50px;
+    display: inline-block;
+    border-bottom: 2px solid black;
+    padding-right: 100px;
+}
+
+.TituloNoticia{
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 30px;
+    color: #ffffff;
+    margin: 10px 0px 0px 20px;
+
+}
+
+.TextobajaNoticia{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: #ffffff;
+    margin-left: 20px ;
+}
+
+.SubtituloSeccion {
+    width: 100%;
+    height: auto;
+
+    a{
+        display: flex;
+        justify-content: flex-end;
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 28px;
+        color: #000000;
+        text-decoration: underline;
+        margin: 10px 50px 10px 50px;
+    }
+}
+
+.Calendario2{
+    @include flexBasico(column,none,none);
+}
+
+.CardCalendario{
+    background-color: rgba(0, 0, 141, 0.131) ;
+    border: 2px solid rgba(0, 0, 141, 0.535);
+    border-radius: 15px;
+    @include flexBasico(row,space-evenly,center);
+    height: 200px;
+    width: 100%;
+
+    img{
+            height: 60%;
+            width: auto;
+    }
+}
+
+.logocardcalendario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 200px;
+    width: 200px;
+}
+
+
+.titulocardcalendario{
+    @include flexBasico(column,center,center);
+    height: 100%;
+    p{
+        font-family: "Roboto", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        font-size: 30px;
+        color: #000;
+    }
+}
+
+
+.BotonCardCalendario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+}
+
+

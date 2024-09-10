@@ -1,0 +1,305 @@
+* {
+  font-family: "Roboto", system-ui;
+  font-style: normal;
+}
+
+.TitularSeccion {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 36px;
+  margin: 12px 0px 12px 50px;
+  display: inline-block;
+  border-bottom: 2px solid black;
+  padding-right: 100px;
+}
+
+.TituloNoticia {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 30px;
+  color: #ffffff;
+  margin: 10px 0px 0px 20px;
+}
+
+.TextobajaNoticia {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  color: #ffffff;
+  margin-left: 20px;
+}
+
+.SubtituloSeccion {
+  width: 100%;
+  height: auto;
+}
+.SubtituloSeccion a {
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 28px;
+  color: #000000;
+  text-decoration: underline;
+  margin: 10px 50px 10px 50px;
+}
+
+.Calendario2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  align-items: none;
+}
+
+.CardCalendario {
+  background-color: rgba(0, 0, 141, 0.131);
+  border: 2px solid rgba(0, 0, 141, 0.535);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+  height: 200px;
+  width: 100%;
+}
+.CardCalendario img {
+  height: 60%;
+  width: auto;
+}
+
+.logocardcalendario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 200px;
+  width: 200px;
+}
+
+.titulocardcalendario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.titulocardcalendario p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 30px;
+  color: #000;
+}
+
+.BotonCardCalendario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  height: 100%;
+}
+
+@font-face {
+  font-family: "BillsMafia";
+  src: url(../font/BillsMafia.ttf);
+}
+header {
+  height: 25vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  align-items: none;
+  color: #FFFFFF;
+  background-color: #00348d;
+}
+header .headerbills {
+  display: flex;
+  flex-direction: row;
+  justify-content: none;
+  align-items: none;
+  width: 30%;
+  height: 70%;
+}
+header .headerbills .logobills {
+  width: 50%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .headerbills .logobills a {
+  overflow: hidden;
+  display: flex;
+  flex-direction: none;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+}
+header .headerbills .logobills a img {
+  display: block;
+  width: 80%;
+  height: auto;
+  max-width: 100%;
+  padding: 20px 20px 20px 20px;
+}
+header .titulobills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+header .titulobills p {
+  font-family: "BillsMafia";
+  font-size: 40px;
+  font-weight: 900;
+  margin: 0px;
+  text-align: right;
+}
+header nav {
+  height: auto;
+  width: 100%;
+  font-size: 30px;
+  bottom: 0;
+  left: 0;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: space-around;
+  list-style-type: none;
+  padding: 0px;
+}
+header nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.UltimasNoticias {
+  height: 600px;
+  width: 95%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+}
+.UltimasNoticias .ImagenNoticia {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  min-height: 50%;
+  height: auto;
+  object-fit: cover;
+}
+.UltimasNoticias .Titular {
+  height: 20%;
+  width: 100%;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.4235294118);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.Calendario {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  padding: 0px 50px 0px 50px;
+}
+
+.CardCalendario1 {
+  grid-area: 1/1/2/2;
+}
+
+.CardCalendario2 {
+  grid-area: 1/2/2/3;
+}
+
+.CardCalendario3 {
+  grid-area: 2/1/3/2;
+}
+
+.CardCalendario4 {
+  grid-area: 2/2/3/3;
+}
+
+.conecta {
+  width: 95%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.NavBarEquipo {
+  font-size: 20px;
+  color: #ffffff;
+  height: 40px;
+  width: 95%;
+  background-color: rgba(0, 0, 141, 0.536);
+  border: 2px solid rgb(0, 0, 141);
+  margin: 0 auto;
+}
+.NavBarEquipo nav {
+  height: 40px;
+  width: 80%;
+  margin: 0 auto;
+}
+.NavBarEquipo ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+.CardEquipo {
+  width: 95%;
+  margin: 0 auto;
+  column-gap: 10px;
+}
+
+footer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #00348d;
+}
+footer nav {
+  width: 100%;
+  height: auto;
+}
+footer nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: space-around;
+  list-style-type: none;
+  padding: 0px;
+}
+footer nav li a {
+  color: #FFFFFF;
+  font-size: 20px;
+  text-decoration: none;
+}
+footer .LogoFooter {
+  width: 200px;
+  height: auto;
+  margin: 20px 20px 20px 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
