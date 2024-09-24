@@ -23,11 +23,11 @@ header{
 
     .headerbills{
         @include flexBasico(row,none ,none);
-        width: 30%;
+        width: 50%;
         height: 70%;
 
         .logobills{
-            width: 50%;
+            width: 30%;
             height: auto;
             overflow: hidden;
             @include flexBasico(column,center,center);
@@ -54,7 +54,7 @@ header{
             font-size: 40px;
             font-weight: 900;
             margin: 0px;
-            text-align: right;
+            text-align: left;
         }
     }
     nav{
@@ -76,7 +76,45 @@ header{
         }
     }
 
-    @media (min-width: 579px) and (max-width: 768px ) {
+    @media (max-width: 955px) {
+
+        
+    .headerbills{
+        @include flexBasico(row,center,center);
+        width: 100%;
+        height: 70%;
+
+        .logobills{
+            width: 30%;
+            height: auto;
+            overflow: hidden;
+            @include flexBasico(column,center,center);
+            a{
+                overflow: hidden;
+                @include flexBasico(none,center,center);
+                object-fit: contain;
+                img{
+                    display: block;
+                    width: 80%;
+                    height: auto;
+                    max-width: 100%;
+                    padding: 20px 20px 20px 20px;
+                }
+            }
+        }
+    }
+    .titulobills{
+        @include flexBasico(row,space-evenly,center);
+        width: 50%;
+        height: 50%;
+        p{
+            font-family: "BillsMafia";
+            font-size: 30px;
+            font-weight: 900;
+            margin: 0px;
+            text-align: left;
+        }
+    }
 
         .NavBarHeader  li a{
             font-size: 20px;
@@ -117,8 +155,7 @@ header{
         bottom: 0;
         left: 0;
     }
-
-    @media (min-width: 579px) and (max-width: 768px ) {
+    @media (max-width: 955px) {
 
         .ImagenNoticia{
             width: 100%;
@@ -127,6 +164,10 @@ header{
         }
     
 }
+}
+
+.noticias2{
+    @include flexBasico(row,space-evenly,center);
 }
 
 .Calendario {
@@ -150,7 +191,7 @@ header{
         margin: 0 auto;
     }
 
-    @media (min-width: 579px) and (max-width: 768px ) {
+    @media (max-width: 955px ) {
         .Calendario{
             display:flex;
             flex-direction: column;
@@ -162,7 +203,7 @@ header{
         color: nth($colores,2);
         height: 40px;
         width: 95%;
-        background-color: rgba(0, 0, 141, 0.536) ;
+        background-color: #00008d89 ;
         border: 2px solid rgb(0, 0, 141);
         margin: 0 auto;
 
@@ -176,13 +217,22 @@ header{
         ul{
             @include flexBasico(row,space-around,center);
             list-style-type: none;
+            li a{
+                color: nth($colores,2);
+                text-decoration: none;
+            }
+        }
+
+        &:active{
+            color: #0000ff;
+            text-decoration: none;
         }
     }
 
     .CardEquipo{
         width: 95%;
         margin: 0 auto;
-        column-gap: 10px;
+        margin-top: 10px;
     }
 
 //css footer
@@ -192,6 +242,7 @@ footer{
     height: 100%;
     @include flexBasico(column,center,center);
     background-color: nth($colores , 1 );
+    margin-top: 10px;
     
 
     nav{

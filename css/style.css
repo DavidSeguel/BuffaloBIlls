@@ -69,6 +69,8 @@
 .CardCalendario img {
   height: 60%;
   width: auto;
+  max-width: 200px;
+  max-height: auto;
 }
 
 .logocardcalendario {
@@ -93,6 +95,24 @@
   font-style: normal;
   font-size: 30px;
   color: #000;
+  text-align: center;
+}
+
+.titulocardequipo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  max-width: 200px;
+}
+.titulocardequipo p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 28px;
+  color: #000;
+  text-align: center;
 }
 
 .BotonCardCalendario {
@@ -137,11 +157,11 @@ header .headerbills {
   flex-direction: row;
   justify-content: none;
   align-items: none;
-  width: 30%;
+  width: 50%;
   height: 70%;
 }
 header .headerbills .logobills {
-  width: 50%;
+  width: 30%;
   height: auto;
   overflow: hidden;
   display: flex;
@@ -168,7 +188,7 @@ header .titulobills {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: none;
   width: 50%;
   height: 100%;
 }
@@ -177,7 +197,7 @@ header .titulobills p {
   font-size: 40px;
   font-weight: 900;
   margin: 0px;
-  text-align: right;
+  text-align: left;
 }
 header nav {
   height: auto;
@@ -190,7 +210,7 @@ header nav ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: space-around;
+  align-items: none;
   list-style-type: none;
   padding: 0px;
 }
@@ -199,7 +219,54 @@ header nav a {
   text-decoration: none;
   font-weight: 900;
 }
-@media (min-width: 579px) and (max-width: 768px) {
+@media (max-width: 955px) {
+  header .headerbills {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+  }
+  header .headerbills .logobills {
+    width: 30%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  header .headerbills .logobills a {
+    overflow: hidden;
+    display: flex;
+    flex-direction: none;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+  }
+  header .headerbills .logobills a img {
+    display: block;
+    width: 80%;
+    height: auto;
+    max-width: 100%;
+    padding: 20px 20px 20px 20px;
+  }
+  header .titulobills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+  }
+  header .titulobills p {
+    font-family: "BillsMafia";
+    font-size: 30px;
+    font-weight: 900;
+    margin: 0px;
+    text-align: left;
+  }
   header .NavBarHeader li a {
     font-size: 20px;
     color: #FFFFFF;
@@ -232,12 +299,19 @@ header nav a {
   bottom: 0;
   left: 0;
 }
-@media (min-width: 579px) and (max-width: 768px) {
+@media (max-width: 955px) {
   .UltimasNoticias .ImagenNoticia {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+}
+
+.noticias2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .Calendario {
@@ -272,7 +346,7 @@ header nav a {
   margin: 0 auto;
 }
 
-@media (min-width: 579px) and (max-width: 768px) {
+@media (max-width: 955px) {
   .Calendario {
     display: flex;
     flex-direction: column;
@@ -283,7 +357,7 @@ header nav a {
   color: #FFFFFF;
   height: 40px;
   width: 95%;
-  background-color: rgba(0, 0, 141, 0.536);
+  background-color: rgba(0, 0, 141, 0.537254902);
   border: 2px solid rgb(0, 0, 141);
   margin: 0 auto;
 }
@@ -296,14 +370,22 @@ header nav a {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: space-around;
+  align-items: center;
   list-style-type: none;
+}
+.NavBarEquipo ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.NavBarEquipo:active {
+  color: #0000ff;
+  text-decoration: none;
 }
 
 .CardEquipo {
   width: 95%;
   margin: 0 auto;
-  column-gap: 10px;
+  margin-top: 10px;
 }
 
 footer {
@@ -314,6 +396,7 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: #00348d;
+  margin-top: 10px;
 }
 footer nav {
   width: 100%;
@@ -323,7 +406,7 @@ footer nav ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: space-around;
+  align-items: none;
   list-style-type: none;
   padding: 0px;
 }

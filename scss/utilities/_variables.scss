@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: $flexDirection;
     justify-content: $justifyContent;
-    align-items: $justifyContent ;
+    align-items: $alignItems ;
 }
 
 .TitularSeccion{
@@ -70,6 +70,8 @@
     img{
             height: 60%;
             width: auto;
+            max-width: 200px;
+            max-height: auto;
     }
 }
 
@@ -92,8 +94,24 @@
         font-style: normal;
         font-size: 30px;
         color: #000;
+        text-align: center;
     }
 }
+
+.titulocardequipo{
+    @include flexBasico(column,center,center);
+    height: 100%;
+    max-width: 200px;
+    p{
+        font-family: "Roboto", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        font-size: 28px;
+        color: #000;
+        text-align: center;
+    }
+}
+
 
 
 .BotonCardCalendario {
